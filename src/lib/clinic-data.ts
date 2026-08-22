@@ -8,7 +8,7 @@ export const doctor = {
   serviceArea: "Ahmedabad",
   tagline: "Personalised physiotherapy care for lasting recovery, in Ahmedabad.",
   bio: [
-    "Dr. Bhumika Jethwa is a Consultant Physiotherapist based in Ahmedabad, holding a Master's in Physiotherapy (Community Health and Rehabilitation) with over 5 years of clinical experience.",
+    "Dr. Bhumika Jethwa is a Consultant Physiotherapist (M.P.T. in Community Health & Rehabilitation) with 6+ years of clinical experience. She provides expert care for a wide range of conditions, including joint replacements, arthritis, sports injuries, back/neck pain, and neurological rehabilitation like paralysis and cerebral palsy.",
     "She is associated with multiple hospitals and clinics across Ahmedabad, and has treated a wide range of neurological, orthopaedic, post-surgical, and sports-related conditions.",
     "Beyond clinic-based care, Dr. Jethwa offers home visits and tele-consultations, along with corporate physiotherapy and ergonomics consulting for desk-job posture correction and lifestyle management.",
   ],
@@ -72,6 +72,9 @@ export const conditionsTreated = [
   "Shoulder Pain",
   "Rheumatoid Arthritis",
   "Sciatica",
+  "Stroke",
+  "Spinal Cord Injury",
+  "Parkinson's Disease",
 ];
 
 export const whyChooseUs = [
