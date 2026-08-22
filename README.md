@@ -48,18 +48,28 @@ npm run build
 
 Produces a static site in the `out/` directory.
 
-## Deploying to Cloudflare Pages
+## Deploying to Cloudflare
 
-1. Push this repository to GitHub (already connected to
-   `drbhumikajethwa/physiotherapy-clinic`).
-2. In the Cloudflare dashboard: **Workers & Pages → Create → Pages → Connect to Git**,
-   select this repository.
-3. Build settings:
-   - **Framework preset:** None (or Next.js — Static HTML Export)
+This repo is connected to Cloudflare's Git integration as a **Workers (static assets)**
+project — Cloudflare's current unified path, which replaces the classic Pages product for
+new projects. `wrangler.jsonc` declares the static export (`out/`) as the assets directory.
+
+1. Push to GitHub (already connected to `drbhumikajethwa/physiotherapy-clinic`).
+2. In the Cloudflare dashboard project settings, build settings should be:
    - **Build command:** `npm run build`
-   - **Build output directory:** `out`
-4. Save and deploy. Cloudflare will build and deploy automatically on every push to
-   `main`, and provide a `*.pages.dev` URL.
+   - **Deploy command:** `npx wrangler deploy`
+3. Cloudflare builds and runs `wrangler deploy` automatically on every push to `main`.
+   Wrangler reads `wrangler.jsonc` and publishes the contents of `out/` as static assets.
+4. The default URL is `<name>.<subdomain>.workers.dev` (not `*.pages.dev` — that naming is
+   specific to the classic Pages product). Attach a custom domain from the Cloudflare
+   dashboard once you're ready to go live under your own domain.
+
+To verify the config locally without deploying:
+
+```bash
+npm run build
+npx wrangler deploy --dry-run
+```
 
 ## Roadmap
 
