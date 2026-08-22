@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { doctor, whyChooseUs } from "@/lib/clinic-data";
 
 export const metadata: Metadata = {
@@ -12,8 +13,14 @@ export default function AboutPage() {
       <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">About the Physiotherapist</h1>
 
       <div className="mt-8 flex flex-col gap-8 md:flex-row md:items-start">
-        <div className="mx-auto flex h-40 w-40 shrink-0 items-center justify-center rounded-full bg-teal-50 text-center text-xs font-medium text-teal-700 ring-4 ring-teal-100 md:mx-0">
-          Photo of {doctor.name}
+        <div className="relative mx-auto h-40 w-40 shrink-0 overflow-hidden rounded-full ring-4 ring-teal-100 md:mx-0">
+          <Image
+            src="/images/dr-bhumika-jethwa.jpg"
+            alt={doctor.name}
+            fill
+            sizes="10rem"
+            className="object-cover"
+          />
         </div>
 
         <div>

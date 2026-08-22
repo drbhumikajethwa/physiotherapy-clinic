@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { contact, doctor } from "@/lib/clinic-data";
 
@@ -39,10 +40,15 @@ export default function Hero() {
         </div>
 
         <div className="flex-1">
-          <div className="mx-auto flex h-56 w-56 items-center justify-center rounded-full bg-white/10 ring-4 ring-white/30 sm:h-72 sm:w-72">
-            <span className="px-6 text-center text-sm font-medium text-teal-50">
-              Photo of Dr. Bhumika Jethwa
-            </span>
+          <div className="relative mx-auto h-56 w-56 overflow-hidden rounded-full ring-4 ring-white/30 sm:h-72 sm:w-72">
+            <Image
+              src="/images/dr-bhumika-jethwa.jpg"
+              alt={doctor.name}
+              fill
+              sizes="(min-width: 640px) 18rem, 14rem"
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
       </div>
