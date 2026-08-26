@@ -55,10 +55,30 @@ export default function ContactPage() {
 
       <div className="mt-10 rounded-xl bg-slate-50 p-6">
         <h2 className="font-semibold text-slate-900">Service Area</h2>
-        <p className="mt-2 text-slate-600">{contact.serviceArea}</p>
+        <p className="mt-2 text-slate-600">{contact.address}</p>
         <p className="mt-1 text-sm text-slate-500">
           Associated with multiple hospitals &amp; clinics in Ahmedabad.
         </p>
+        <a
+          href={contact.mapDirectionsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-3 inline-block text-sm font-semibold text-teal-700 hover:text-teal-800"
+        >
+          Get Directions →
+        </a>
+      </div>
+
+      <div className="mt-6 h-64 overflow-hidden rounded-xl border border-slate-200 sm:h-80">
+        <iframe
+          src={contact.mapEmbedUrl}
+          title={`Map to ${contact.address}`}
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        />
       </div>
     </div>
   );

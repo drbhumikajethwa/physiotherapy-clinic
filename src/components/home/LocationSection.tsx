@@ -16,9 +16,26 @@ export default function LocationSection() {
               Consultations available at partner clinics and hospitals across Ahmedabad,
               plus home visits and tele-consultation for patients who cannot travel.
             </p>
+            <p className="mt-4 text-sm text-slate-600">{contact.address}</p>
+            <a
+              href={contact.mapDirectionsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block text-sm font-semibold text-teal-700 hover:text-teal-800"
+            >
+              Get Directions →
+            </a>
           </div>
-          <div className="flex h-48 items-center justify-center rounded-xl border-2 border-dashed border-slate-300 bg-slate-100 text-sm text-slate-500">
-            Map coming soon
+          <div className="h-64 overflow-hidden rounded-xl border border-slate-200 md:h-80">
+            <iframe
+              src={contact.mapEmbedUrl}
+              title={`Map to ${contact.address}`}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </div>

@@ -14,6 +14,9 @@ export const doctor = {
   ],
 };
 
+const clinicAddress =
+  "Vidyanagar Flats, Himatlal Park, Vidhya Nagar, I I M, Vastrapur, Ahmedabad, Gujarat 380015";
+
 export const contact = {
   phone: "+91 95122 03854",
   phoneHref: "tel:+919512203854",
@@ -22,6 +25,9 @@ export const contact = {
   instagramHandle: "@physio_bhumika",
   instagramUrl: "https://instagram.com/physio_bhumika",
   serviceArea: "Ahmedabad, Gujarat",
+  address: clinicAddress,
+  mapEmbedUrl: `https://www.google.com/maps?q=${encodeURIComponent(clinicAddress)}&output=embed`,
+  mapDirectionsUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(clinicAddress)}`,
 };
 
 export const specializations = [
