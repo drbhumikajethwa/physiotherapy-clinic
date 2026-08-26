@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 const siteUrl = "https://physiotherapy-clinic.pages.dev";
 const title = "Dr. Bhumika Jethwa | Consultant Physiotherapist in Ahmedabad";
 const description =
-  "Dr. Bhumika Jethwa, M.P.T (Community Health and Rehabilitation), is a Consultant Physiotherapist with 5+ years of clinical experience in Ahmedabad. Neuro, ortho, post-surgical, sports injury, antenatal & postnatal, and geriatric rehabilitation. Clinic visits, home visits, and tele-consultation available.";
+  "Dr. Bhumika Jethwa, M.P.T (Community Health and Rehabilitation), is a Consultant Physiotherapist with 6+ years of clinical experience in Ahmedabad. Neuro, ortho, post-surgical, sports injury, antenatal & postnatal, and geriatric rehabilitation. Clinic visits, home visits, and tele-consultation available.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

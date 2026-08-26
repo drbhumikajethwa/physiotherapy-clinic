@@ -4,7 +4,7 @@ export const doctor = {
   name: "Dr. Bhumika Jethwa",
   qualification: "M.P.T (Community Health and Rehabilitation)",
   title: "Consultant Physiotherapist",
-  experience: "5+ Years of Clinical Experience",
+  experience: "6+ Years of Clinical Experience",
   serviceArea: "Ahmedabad",
   tagline: "Personalised physiotherapy care for lasting recovery, in Ahmedabad.",
   bio: [
@@ -79,7 +79,7 @@ export const conditionsTreated = [
 
 export const whyChooseUs = [
   {
-    title: "5+ Years of Clinical Experience",
+    title: "6+ Years of Clinical Experience",
     description: "Trusted, hands-on experience treating a wide range of conditions.",
   },
   {
